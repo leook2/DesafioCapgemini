@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="Desafio2.js"></script>
+    <script>
+        var letras = "abcdefghijklmnopqrstuvwxyz";
+        var charSpecial = "!@#$%^&*()-+";
+        const tamanho = 6;
+        var str = prompt('Insira a palavra:');
+        var validacao = validarString(str, tamanho);
+
+        var strComplemento = "";
+        document.write('<pre>')
+        if (validacao.completa) {
+            document.write("Parabéns, sua senha é segura!")
+        } else {
+            document.write("Para ser segura, sua senha deve ter mais: <br>")
+            if (!validacao.tamanho) {
+                document.write(`Pelo menos mais  ${tamanho - str.length} digito(s).<br>`);
+            }
+            if (!validacao.numero) {
+                strComplemento += randomInt(0, 9);
+                document.write(`Pelo menos um número inteiro.<br>`)
+            }
+            if (!validacao.charSpecial) {
+                strComplemento += charSpecial[randomInt(0, 11)];
+                document.write(`Pelo menos um caractere especial.<br>`)
+            }
+            if (!validacao.minuscula) {
+                strComplemento += letras[randomInt(0, 25)];
+                document.write(`Pelo menos uma letra minuscula.<br>`)
+            }
+            if (!validacao.maiuscula) {
+                strComplemento += letras[randomInt(0, 25)].toUpperCase();
+                document.write(`Pelo menos uma letra maiuscula.<br>`)
+            }
+            aux = str.length + strComplemento.length;
+            while (aux < tamanho) {
+                strComplemento += letras[randomInt(0, 25)];
+                aux++
+            }
+            document.write(`Como sugestão, acrescente os ${strComplemento.length} caracteres: ${strComplemento} <br>`)
+        }
+
+        document.write('</pre>')
+
+    </script>
+</body>
+
+</html>
