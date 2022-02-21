@@ -10,7 +10,10 @@ O algorítmo apresentará uma escada no tamanho do valor digitado utilizando o c
 # Questão 2#
 Ao clonar o repositório em sua máquina, entre na pasta Desafio2 e clique no arquivo Desafio2.html
 No Desafio2 será solicitado através de um prompt no navegador que o usuário digite uma senha com 
-pelo menos 6 caracteres que devem conter letras (Maiúsculas e Minúsculas). caracteres especiais 
+pelo menos 6 caracteres que devem conter letras (Maiúsculas e Minúsculas), caracteres especiais 
 ex: (@#$...),e números. Caso o usuário deixe de digitar algum desses caracteres solicitados o algorítmo
-informará e fornecerá sugestões para a senha seja considerada "forte".
+informará e fornecerá sugestões para a senha seja considerada "segura".
 
+# Questão 3#
+Ao clonar o repositório em sua máquina, entre na pasta Desafio2 e clique no arquivo Desafio2.html
+Referente à terceira questão do desafio, não foi possível completá-la dentro do prazo, devido ao grau de dificuldade. Ainda assim enviei um rascunho do que consegui preparar para mostrar o esforço empenhado na tentativa da resolução do desafio proposto.
