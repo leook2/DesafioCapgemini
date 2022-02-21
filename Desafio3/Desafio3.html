@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var palavra1 = prompt("");
+        var palavra2 = prompt ("");
+        var resultado = checkAnagram(palavra1, palavra2);
+        document.write(resultado.length);
+        function checkAnagram(a, b) {
+
+            // Not of same length, can't be Anagram
+            if (a.length !== b.length) {
+                return false;
+            }
+
+            // Inbuilt functions to rearrange the string
+            var str1 = a.split('').sort().join('');
+            var str2 = b.split('').sort().join('');
+
+            var result = (str1 === str2);
+            return result;
+        }
+
+        // Checking the output
+        document.write(checkAnagram('abc', 'cba'));
+    </script>
+
+
+
+</body>
+
+</html>
